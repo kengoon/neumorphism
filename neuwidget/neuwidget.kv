@@ -20,3 +20,50 @@
             spread_radius: -30, -30
             border_radius: 20, 20, 20, 20
             blur_radius: 60
+
+<InsetNeuWidget>:
+    md_bg_color: "#cccccc"
+    radius: 20
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, .6
+        BoxShadow:
+            pos: self.pos
+            size: self.size
+            offset: -10, 10
+            spread_radius: 0, 0
+            border_radius: 20, 20, 20, 20
+            blur_radius: 80
+        Color:
+            rgba: 0, 0, 0, .6
+        BoxShadow:
+            pos: self.pos
+            size: self.size
+            offset: 10, -10
+            spread_radius: -30, -30
+            border_radius: 20, 20, 20, 20
+            blur_radius: 60
+        
+    # inset shadows
+    canvas:
+        Color:
+            rgba: 0, 0, 0, .6
+        BoxShadow:
+            pos: self.x + dp(20), self.y + dp(20)
+            size: self.width - dp(40), self.height - dp(40)
+            offset: 10, -10
+            inset: True
+            spread_radius: -30, -30
+            border_radius: 20, 20, 20, 20
+            blur_radius: 60
+        Color:
+            rgba: 1, 1, 1, .6
+        BoxShadow:
+            pos: self.x + dp(20), self.y + dp(20)
+            size: self.width - dp(40), self.height - dp(40)
+            inset: True
+            offset: -10, 10
+            spread_radius: -10, -10
+            border_radius: 20, 20, 20, 20
+            blur_radius: 60
+

@@ -3,7 +3,11 @@ from kivy.lang import Builder
 
 Builder.load_file("neuwidget/neuwidget.kv")
 
-__all__ = ("NeuWidget",)
+__all__ = ("NeuWidget", "InsetNeuWidget")
 
 class NeuWidget(MDBoxLayout):
+    ...
+
+
+class InsetNeuWidget(MDBoxLayout):
     ...
